@@ -4,13 +4,13 @@ const cron = require('node-cron');
 const { checkStory } = require('./lib/fetcher');
 const color = require('./utils/color');
 var moment = require('moment-timezone');
-moment.tz.setDefault('Asia/Jakarta'); // Change this to your local timezone
-moment.locale('id'); // Change this to your locale
+moment.tz.setDefault('Australia/Adelaide');
+moment.locale('ACST');
 const { Telegraf } = require('telegraf');
 require('dotenv').config();
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-let list = ''; // HERE IS YOUR TARGET USERNAME e.g 'aswbgtya,adidas,adiraas.p' separated by comma // don't put username too much, your account may be locked
+let list = 'therealgoat888, thecomforttimes';
 let parsedTarget =  list.split(",");
 
 
